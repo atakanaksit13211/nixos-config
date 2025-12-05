@@ -11,5 +11,6 @@
     ./services.nix
     ./sound.nix
     ./system.nix
+    ./yesvideo.nix
   ];
 }

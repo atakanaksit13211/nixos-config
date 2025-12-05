@@ -17,7 +17,7 @@
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
   {
     homeConfigurations = {
-      tux = home-manager.lib.homeManagerConfiguration {
+      quantrop = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit self inputs;};
         modules = [
@@ -26,7 +26,7 @@
       };
     };
     nixosConfigurations = {
-      nixos = inputs.nixpkgs.lib.nixosSystem {
+      apollo = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
 	    modules = [

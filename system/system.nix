@@ -1,11 +1,19 @@
 { pkgs, ... }:
 
 {
-  users.users.tux = {
+  users.users.quantrop = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    description = "tux";
-    extraGroups = ["networkmanager" "wheel"];
+    description = "quantrop";
+    extraGroups = ["networkmanager" "wheel" "input"];
+    packages = [];
+  };
+
+  users.users.ayfer = {
+    shell = pkgs.zsh;
+    isNormalUser = true;
+    description = "ayfer";
+    extraGroups = ["networkmanager" "input"];
     packages = [];
   };
 

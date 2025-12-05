@@ -26,49 +26,81 @@ in {
     };
   };
 
+  nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config.permittedInsecurePackages = [ # HACK! FIX LATER!
+                "ciscoPacketTracer8-8.2.2"
+  ];
+
   environment = {
     systemPackages = with pkgs; [
       kdePackages.krdp
+      kdePackages.krdc
+      kdePackages.krfb
+      kdePackages.sddm-kcm
+      kdePackages.oxygen
+      kdePackages.kpat
+      iio-sensor-proxy
+      libinput
+      amdgpu_top
       ardour
       audacity
       bottles
-      brave
+      lutris
+      lm_sensors
       carla
+      clinfo
+      ciscoPacketTracer8
+      easyeffects
+      foot
+      fastfetch
       git
-      glxinfo
+      mesa-demos
+      qbittorrent
       pkgs-stable.jamesdsp
       jdk17
       jdk8
+      jdk
+      jetbrains.idea-community-bin
       kdePackages.kdenlive
       kdePackages.plasma-thunderbolt
       krita
-      librewolf
+      firefox
       lshw
+      libreoffice-qt6-fresh
+      maliit-keyboard
+      mangohud
+      moonlight-qt
+      mpv
+      mysql-workbench
       nil
       nvtopPackages.full
       neovim
       obs-studio
       okteta
       onlyoffice-desktopeditors
+      htop
+      hack-font
       pciutils
-      picard
       prismlauncher
-      protonup
+      protonup-ng
       protonup-qt
       protonvpn-gui
+      pysolfc
       qbittorrent
       reaper
       rnote
       ryzenadj
       steamtinkerlaunch
-      tauon
-      thunderbird
+      sshfs
       unrar
-      vesktop
+      uw-ttyp0
+      inputs.nixpkgs-stable.legacyPackages.x86_64-linux.vesktop
       vlc
       vulkan-tools
       wget
-      zapzap
+      waypipe
+      xournalpp
       vscodium-fhs
     ];
   };

@@ -4,9 +4,6 @@ let
   btusb-mt7922-fix = pkgs.callPackage ../patches/btusb-mt7922-fix.nix {
     kernel = config.boot.kernelPackages.kernel;
   };
-  tether-fix = pkgs.callPackage ../patches/tether-fix.nix {
-    kernel = config.boot.kernelPackages.kernel;
-  };
 in {
   boot = {
     loader = {
@@ -23,9 +20,6 @@ in {
     extraModulePackages = [
       (btusb-mt7922-fix.overrideAttrs (_: {
         patches = [ ../patches/mt7922-bluetooth-patch ];
-      }))
-      (tether-fix.overrideAttrs (_: {
-        patches = [ ../patches/rndis-patch ];
       }))
     ];
   };

@@ -20,8 +20,6 @@
     };
 
     plasma6.excludePackages = with pkgs.kdePackages; [
-      khelpcenter
-      plasma-browser-integration
       elisa
     ];
   };

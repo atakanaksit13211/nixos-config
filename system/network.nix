@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "nixos";
+    hostName = "apollo";
 
     networkmanager.enable = true;
 

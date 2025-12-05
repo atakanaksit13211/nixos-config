@@ -4,8 +4,8 @@
     packages = with pkgs; [
       # home-manager
     ];
-    username = "tux";
-    homeDirectory = "/home/tux";
+    username = "quantrop";
+    homeDirectory = "/home/quantrop";
     stateVersion = "24.11";
   };
   programs = {
